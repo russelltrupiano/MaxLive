@@ -1,0 +1,59 @@
+extends layout
+
+block content
+    div.sliders
+        div.sliderWrapper
+            input#tempoSlider(type="range" name="tempoText" max="256" min="30" step="1" oninput="sendTempoVal(this.value)" onchange="sendTempoVal(this.value)")
+        div.sliderWrapper
+            input#otherSlider(type="range" name="otherText" max="256" min="0" step="1" oninput="sendOtherVal(this.value)" onchange="sendOtherVal(this.value)")
+        div.sliderWrapper
+            input#1Slider(type="range" name="1Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
+        div.sliderWrapper
+            input#2Slider(type="range" name="2Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
+        div.sliderWrapper
+            input#3Slider(type="range" name="3Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
+
+    div.labels
+        div.labelWrapper
+            p.labelText Tempo
+        div.labelWrapper
+            p.labelText Other
+        div.labelWrapper
+            p.labelText null
+        div.labelWrapper
+            p.labelText null
+        div.labelWrapper
+            p.labelText null
+
+    div.vocoderWrapper
+        div.inputWrapper
+            form#vocoderForm(method="POST" action="/max/vocoder")
+                input#vocoderInput(type="text" pattern="[A-Za-z ]{1,100}")
+                button(type="submit") Say It!
+
+    div.pianoWrapper
+        ul(class="set")
+            li(class="white b")
+            li(class="black as")
+            li(class="white a")
+            li(class="black gs")
+            li(class="white g")
+            li(class="black fs")
+            li(class="white f")
+            li(class="white e")
+            li(class="black ds")
+            li(class="white d")
+            li(class="black cs")
+            li(class="white c")
+
+    script.
+        function sendTempoVal(data) {
+            console.log(data)
+            $.post( "/max/tempo", { theText: data} );
+        }
+        function sendOtherVal(data) {
+            console.log(data)
+            $.post( "/max/other", { theText: data} );
+        }
+
+
