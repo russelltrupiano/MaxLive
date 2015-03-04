@@ -6,13 +6,13 @@ block content
         div.labelWrapper
             p.labelText Tempo
         div.labelWrapper
-            p.labelText Other
+            p.labelText Reverb
         div.labelWrapper
-            p.labelText null
+            p.labelText Attack
         div.labelWrapper
-            p.labelText null
+            p.labelText Panning
         div.labelWrapper
-            p.labelText null
+            p.labelText Volume
 
     div.sliders
         div.sliderWrapper
@@ -34,18 +34,18 @@ block content
 
     div.pianoWrapper
         ul(class="set")
-            li(class="white b")
-            li(class="black as")
-            li(class="white a")
-            li(class="black gs")
-            li(class="white g")
-            li(class="black fs")
-            li(class="white f")
-            li(class="white e")
-            li(class="black ds")
-            li(class="white d")
-            li(class="black cs")
-            li(class="white c")
+            li.pianoKey(class="white b")
+            li.pianoKey(class="black as")
+            li.pianoKey(class="white a")
+            li.pianoKey(class="black gs")
+            li.pianoKey(class="white g")
+            li.pianoKey(class="black fs")
+            li.pianoKey(class="white f")
+            li.pianoKey(class="white e")
+            li.pianoKey(class="black ds")
+            li.pianoKey(class="white d")
+            li.pianoKey(class="black cs")
+            li.pianoKey(class="white c")
 
     script.
         function sendTempoVal(data) {
