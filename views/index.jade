@@ -1,17 +1,6 @@
 extends layout
 
 block content
-    div.sliders
-        div.sliderWrapper
-            input#tempoSlider(type="range" name="tempoText" max="256" min="30" step="1" oninput="sendTempoVal(this.value)" onchange="sendTempoVal(this.value)")
-        div.sliderWrapper
-            input#otherSlider(type="range" name="otherText" max="256" min="0" step="1" oninput="sendOtherVal(this.value)" onchange="sendOtherVal(this.value)")
-        div.sliderWrapper
-            input#1Slider(type="range" name="1Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
-        div.sliderWrapper
-            input#2Slider(type="range" name="2Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
-        div.sliderWrapper
-            input#3Slider(type="range" name="3Text" max="256" min="30" step="1" oninput="" onchange="sendVal(this.value)")
 
     div.labels
         div.labelWrapper
@@ -25,10 +14,22 @@ block content
         div.labelWrapper
             p.labelText null
 
+    div.sliders
+        div.sliderWrapper
+            input#tempoSlider(type="range" name="tempoText" max="256" min="30" step="1" oninput="sendTempoVal(this.value)" onchange="sendTempoVal(this.value)")
+        div.sliderWrapper
+            input#otherSlider(type="range" name="otherText" max="256" min="0" step="1" oninput="sendOtherVal(this.value)" onchange="sendOtherVal(this.value)")
+        div.sliderWrapper
+            input#1Slider(type="range" name="1Text" max="256" min="30" step="1" oninput="" onchange="")
+        div.sliderWrapper
+            input#2Slider(type="range" name="2Text" max="256" min="30" step="1" oninput="" onchange="")
+        div.sliderWrapper
+            input#3Slider(type="range" name="3Text" max="256" min="30" step="1" oninput="" onchange="")
+
     div.vocoderWrapper
         div.inputWrapper
             form#vocoderForm(method="POST" action="/max/vocoder")
-                input#vocoderInput(type="text" pattern="[A-Za-z ]{1,100}")
+                input#vocoderInput(type="text")
                 button(type="submit") Say It!
 
     div.pianoWrapper

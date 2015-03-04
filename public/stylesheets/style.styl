@@ -6,6 +6,9 @@
 @import 'jeet'
 @import 'axis'
 
+// Get Roboto font
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
 /*
  * Nib provides a CSS reset
  */
@@ -51,44 +54,79 @@ bg-size ()
 
 html
     height 100%
+    min-width small
+    background url('../img/bg.png')
+    font-family: 'Roboto', sans-serif;
+
+    div.labels
+        span(1)
+        margin-top 50px
+        color #eeeeee
+        font-size 1.2em
+
+        div.labelWrapper
+            span(1/5)
+            text-align center
 
     div.sliders
         span(1)
         margin-top 100px
+        margin-bottom 100px
+
+        +above(mediumlarge)
+            margin-top 150px
+
+        +above(extralarge)
+            margin-top 175px
+
 
         div.sliderWrapper
             span(1/5)
             text-align center
 
             input[type="range"]
-                -webkit-appearance: slider-vertical
-                display inline-block
-
-    div.labels
-        span(1)
-
-        div.labelWrapper
-            span(1/5)
-            text-align center
+                // -webkit-appearance: slider-vertical
+                // display inline-block
 
     div.vocoderWrapper
-        span(1/2, offset: 1/4)
+        span(1/2, offset: 9/32)
 
         +below(medium)
             span(1)
 
         div.inputWrapper
-            margin-left 25px
+            +below(medium)
+                margin-left 25px
             margin-top 100px
 
             input
                 span(5/8)
+                font-size 1.65em
+                border-radius 3px
+                border 1px solid #787878
+                color #555555
+                padding 10px
+                border-top-right-radius 0
+                border-bottom-right-radius 0
+
+            input:focus
+                outline none
+
             button
                 span(1/4)
                 text-align center
+                height 54px
+                button: main-color
+                border-top-left-radius 0
+                border-bottom-left-radius 0
+
+            button:focus
+                outline none
 
     div.pianoWrapper
         span(1)
+
+// Styles for sliders and piano
 
 * {
     box-sizing: border-box;
@@ -96,12 +134,13 @@ html
 ul {
     height: 18.875em;
     width: 34em;
-    margin: 5em auto;
+    margin: 4em auto;
     padding: 3em 0 0 3em;
     position: relative;
     border: 1px solid #160801;
     border-radius: 1em;
-    background: -webkit-gradient(linear, right bottom, left top, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0))), url('http://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png');
+    background: -webkit-gradient(linear, right bottom, left top, color-stop(0%, rgba(0, 0, 0, 0.3)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: url('http://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png');
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) inset, 0 1px rgba(212, 152, 125, 0.2) inset, 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 li {
@@ -150,4 +189,90 @@ ul li:first-child {
 }
 ul li:last-child {
     border-radius: 0 5px 5px 5px;
+}
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 11.75px 0;
+    transform: rotate(270deg)
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 21.5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #2f5a89;
+    border-radius: 1.3px;
+    border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 0px solid #c4c5c3;
+    height: 45px;
+    width: 27px;
+    border-radius: 7px;
+    background: #c1bec0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11.75px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #396ea7;
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 21.5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #2f5a89;
+    border-radius: 1.3px;
+    border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 0px solid #c4c5c3;
+    height: 45px;
+    width: 27px;
+    border-radius: 7px;
+    background: #c1bec0;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 21.5px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #25466b;
+    border: 0px solid #000101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+    background: #2f5a89;
+    border: 0px solid #000101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 0px solid #c4c5c3;
+    height: 45px;
+    width: 27px;
+    border-radius: 7px;
+    background: #c1bec0;
+    cursor: pointer;
+    height: 21.5px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #2f5a89;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #396ea7;
 }
