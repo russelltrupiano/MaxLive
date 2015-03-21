@@ -14,8 +14,8 @@
 // input is x_in. output is x_out, y_out
 
 // inlets and outlets
-inlets = 1
-outlets = 2
+inlets = 1;
+outlets = 2;
 
 var input, output1, output2;
 

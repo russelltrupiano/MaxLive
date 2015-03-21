@@ -21,8 +21,8 @@
 // input is index. output is scale and index
 
 // inlets and outlets
-inlets = 1
-outlets = 3
+inlets = 1;
+outlets = 4;
 
 // Was going to programmatically generate, but 
 // chose to hardcode to save processing time.
@@ -31,26 +31,6 @@ outlets = 3
 // -1 - Flat
 // Scales start on the appropriate note 
 // 		(e.g. index 3 A major array goes from A to G)
-
-/*
-var scales = [
-	[0, 0, 0, 0, 0, 0, 0], //0  - C
-	[0, 0, 0, 0, 0, 0, 1], //1  - G
-	[0, 0, 1, 0, 0, 0, 1], //2  - D
-	[0, 0, 1, 0, 0, 1, 1], //3  - A
-	[0, 1, 1, 0, 0, 1, 1], //4  - E
-	[0, 1, 1, 0, 1, 1, 1], //5  - B
-	[1, 1, 1, 0, 1, 1, 1], //6  - F#
-	[1, 1, 1, 1, 1, 1, 1], //7  - C#
-	[0,   0,  0,  0,  0,  0,  0], //8  - C
-	[0,   0,  0, -1,  0,  0,  0], //9  - F
-	[-1,  0,  0, -1,  0,  0,  0], //10 - Bb
-	[-1,  0,  0, -1, -1,  0,  0], //11 - Eb
-	[-1, -1,  0, -1, -1,  0,  0], //12 - Ab
-	[-1, -1,  0, -1, -1, -1,  0], //13 - Db
-	[-1, -1, -1, -1, -1, -1,  0], //14 - Gb
-	[-1, -1, -1, -1, -1, -1, -1]  //15 - Cb
-];*/
 
 var scales = [
 	/* -------- Keys With Sharps -------- */
@@ -80,14 +60,21 @@ var keyStrings = [
 	"C","F","Bb","Eb","Ab","Db","Gb","Cb"
 ];
 
+var startIndices = [
+	0, 7,  2, 9, 4, 11, 6, 1,
+	0, 5, 10, 3, 8,  1, 6, 11
+];
+
 function msg_int(index_raw) {
 	
 	// Mask off everything but lowest 4 bits
 	var index = index_raw & 15;
 	
-	outlet(0, scales[index]);
-	outlet(1, index);
-	outlet(2, keyStrings[index]);
+	outlet(3, keyStrings[index]);
+	outlet(2, startIndices[index]);
+	outlet(1, scales[index]);
+	outlet(0, index_raw);
+
 	bang();
 }
 
