@@ -10,6 +10,7 @@ router.get('/', function(req, res) {
         return res.render('login', {title: 'Max Live'});
     }
 
+    console.log("Welcome back, " + req.session.name);
     res.render('index', {
         title: 'Max Live',
         name: req.session.name
@@ -21,10 +22,13 @@ router.post('/login', function(req, res) {
 
     req.session.name = username;
 
+    console.log("Welcome, " + req.session.name);
+
     res.redirect("/");
 });
 
 router.get('/logout', function(req, res) {
+    console.log("See ya, " + req.session.name);
     req.session.name = "";
     res.redirect('/');
 });

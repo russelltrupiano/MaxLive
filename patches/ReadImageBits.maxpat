@@ -161,8 +161,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1445.415649, 1005.858154, 34.5, 33.700001 ],
-					"presentation_rect" : [ 1448.415649, 1026.043823, 0.0, 0.0 ]
+					"patching_rect" : [ 1445.415649, 1005.858154, 34.5, 33.700001 ]
 				}
 
 			}
@@ -1118,6 +1117,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -3623,6 +3623,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-158",
+					"int" : 1,
 					"maxclass" : "gswitch2",
 					"numinlets" : 2,
 					"numoutlets" : 2,
@@ -4892,7 +4893,7 @@
 					"patching_rect" : [ 1632.915649, 810.374084, 56.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 405.245087, 518.300049, 56.0, 31.0 ],
-					"text" : "Gb",
+					"text" : "C",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -4921,7 +4922,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1395.492554, 847.543823, 143.0, 18.0 ],
-					"text" : "0 1 0 1 0 1 1 0 1 0 1 1"
+					"text" : "1 0 1 0 1 1 0 1 0 1 0 1"
 				}
 
 			}
