@@ -1,0 +1,11 @@
+extends layout
+
+block content
+
+    div.loginWrapper
+        div.explanationWrapper
+            h3 Enter your name to get started!
+        div.inputWrapper
+            form#loginForm(method="POST" action="/login")
+                input#loginInput(type="text" name="theText" autocomplete="off" maxlength="15")
+                button(type="submit") Let's Go!

@@ -88,16 +88,41 @@ html
                 // -webkit-appearance: slider-vertical
                 // display inline-block
 
-    div.vocoderWrapper
-        span(1/2, offset: 9/32)
+    div.logoutWrapper
+
+        position absolute
+        right 20px
+        top 20px
+
+        p
+            font-size 1em
+            color offwhite
+
+            a
+                color main-color
+                text-decoration none
+
+            a:hover
+                text-decoration underline
+
+    div.loginWrapper
+        span(3/8, offset: 11/32)
+        margin-top 16vh
 
         +below(medium)
             span(1)
 
+        div.explanationWrapper
+            margin-bottom 50px
+
+            h3
+                font-size 2em
+                color offwhite
+
         div.inputWrapper
             +below(medium)
                 margin-left 25px
-            margin-top 100px
+            // margin-top 100px
 
             input
                 span(5/8)
@@ -117,6 +142,51 @@ html
                 text-align center
                 height 54px
                 button: main-color
+                color offwhite
+                border-top-left-radius 0
+                border-bottom-left-radius 0
+
+            button:focus
+                outline none
+
+    div.vocoderWrapper
+        span(3/4, offset: 3/16)
+        margin-top 40vh
+
+        +below(medium)
+            span(1)
+
+        div.explanationWrapper
+            margin-bottom 50px
+
+            h3
+                font-size 2em
+                color offwhite
+
+        div.inputWrapper
+            +below(medium)
+                margin-left 25px
+            // margin-top 100px
+
+            input
+                span(5/8)
+                font-size 1.65em
+                border-radius 3px
+                border 1px solid #787878
+                color #555555
+                padding 10px
+                border-top-right-radius 0
+                border-bottom-right-radius 0
+
+            input:focus
+                outline none
+
+            button
+                span(1/4)
+                text-align center
+                height 54px
+                button: main-color
+                color offwhite
                 border-top-left-radius 0
                 border-bottom-left-radius 0
 

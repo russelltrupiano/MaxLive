@@ -4,6 +4,9 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session')
+var config = require('./config/config');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var max = require('./routes/max');
@@ -43,6 +46,17 @@ app.use(function (req, res, next) {
     // Pass to next layer of middleware
     next();
 });
+
+app.use(session({
+    secret: config.SESSION_SECRET_KEY,
+    resave: false,
+    saveUninitialized: false,
+    key: "session",
+    store: require('mongoose-session')(mongoose, {ttl: 7889230}),
+    cookie: {
+        maxAge: 1200000,
+    }
+}));
 
 app.use('/', routes);
 app.use('/max', max);

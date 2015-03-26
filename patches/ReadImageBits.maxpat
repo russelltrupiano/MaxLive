@@ -210,14 +210,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-302",
-					"linecount" : 3,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 763.026489, 736.963196, 150.473511, 45.0 ],
+					"patching_rect" : [ 763.026489, 736.963196, 150.473511, 18.0 ],
 					"presentation_rect" : [ 832.657898, 838.986328, 0.0, 0.0 ],
-					"text" : "\"And I should kill the rest of the UI as well even though its so pretty\""
+					"text" : "\"Yo Yo - - How y*all b3 @!\""
 				}
 
 			}
@@ -302,13 +301,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-267",
-					"linecount" : 10,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 626.5, 1341.571167, 58.0, 139.0 ],
-					"text" : "\"And I should kill the rest of the UI as well even though its so pretty\""
+					"patching_rect" : [ 626.5, 1341.571167, 58.0, 58.0 ],
+					"text" : "\"Yo Yo - - How y*all b3 @!\""
 				}
 
 			}
@@ -367,13 +366,13 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"id" : "obj-152",
-					"linecount" : 10,
+					"linecount" : 4,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1864.790039, 522.625, 50.0, 139.0 ],
-					"text" : "\"And I should kill the rest of the UI as well even though its so pretty\""
+					"patching_rect" : [ 1864.790039, 522.625, 50.0, 58.0 ],
+					"text" : "\"Yo Yo - - How y*all b3 @!\""
 				}
 
 			}
@@ -388,7 +387,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1470.247803, 679.125, 50.0, 31.0 ],
-					"text" : "file_5.txt"
+					"text" : "file_9.txt"
 				}
 
 			}
@@ -1639,7 +1638,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "int" ],
 									"patching_rect" : [ 243.5, 127.0, 68.0, 20.0 ],
-									"text" : "random 15"
+									"text" : "random 25"
 								}
 
 							}
@@ -2002,7 +2001,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 694.0, 450.0, 31.0, 20.0 ]
+					"patching_rect" : [ 700.5, 450.0, 31.0, 20.0 ]
 				}
 
 			}
@@ -4315,7 +4314,7 @@
 					"patching_rect" : [ 1369.0, 614.625, 34.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 292.995087, 558.300049, 34.0, 18.0 ],
-					"text" : "Eb"
+					"text" : "Gb"
 				}
 
 			}
@@ -4343,7 +4342,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1130.076904, 643.625, 143.0, 18.0 ],
-					"text" : "1 0 1 1 0 1 0 1 1 0 1 0"
+					"text" : "0 1 0 1 0 1 1 0 1 0 1 1"
 				}
 
 			}
@@ -4390,7 +4389,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 726.75, 450.0, 38.75, 20.0 ]
+					"patching_rect" : [ 733.25, 450.0, 38.75, 20.0 ]
 				}
 
 			}
@@ -4772,7 +4771,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 660.0, 450.0, 32.0, 20.0 ]
+					"patching_rect" : [ 660.0, 450.0, 38.5, 20.0 ]
 				}
 
 			}
@@ -6678,7 +6677,7 @@
 					"destination" : [ "obj-39", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 685.6875, 435.0, 703.5, 435.0 ],
+					"midpoints" : [ 685.6875, 435.0, 710.0, 435.0 ],
 					"source" : [ "obj-45", 1 ]
 				}
 

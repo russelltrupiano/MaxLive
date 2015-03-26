@@ -5,8 +5,9 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('node-starter:server');
+var debug = require('debug')('maxlive:server');
 var http = require('http');
+var db = require('../app/models');
 
 /**
  * Get port from environment and store in Express.
@@ -58,5 +59,7 @@ function onError(error) {
  */
 
 function onListening() {
-  debug('Listening on port ' + server.address().port);
+  db.initDB(function () {
+    console.log('Listening on port ' + server.address().port);
+  });
 }
