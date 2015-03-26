@@ -29,7 +29,7 @@ router.post('/other', function(req, res) {
 
 router.post('/vocoder', function(req, res) {
 
-    vocoderClient.send(req.body.theText);
+    vocoderClient.send("Russell:" + req.body.theText);
     res.send(200);
 });
 

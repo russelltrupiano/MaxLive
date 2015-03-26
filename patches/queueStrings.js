@@ -20,10 +20,10 @@ function next() {
 		} else {
 			outlet(1, 1);
 		}
+		outlet(0, nextStr);
 	} else {
 		outlet(2, 1);
 	}
-	outlet(0, nextStr);
 	bang();
 }
 
